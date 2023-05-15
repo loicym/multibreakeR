@@ -16,6 +16,6 @@ Imports:
     stargazer
     reshape
 Suggests: 
-    knitr
+    knitr,
+    rmarkdown
 VignetteBuilder: knitr
-LazyData: true
