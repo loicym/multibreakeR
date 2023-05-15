@@ -21,7 +21,7 @@
 #' @importFrom dplyr "%>%"
 
 
-Main <- function(mat.y,
+Main <- function(mat.y = data10_1_35,
                  mat.x = NULL,
                  trend = FALSE,
                  intercept = TRUE,
