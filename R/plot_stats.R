@@ -67,7 +67,7 @@ PlotStats <-
     g1 <- g1  + geom_line()
 
     g1 <-
-      g1 + ggtitle("") + xlab("Date") + ylab("Index investment (%)")
+      g1 + ggtitle("") + xlab("Date") + ylab("Process")
 
     #force the y axis to start at zero
     g1 <-
@@ -107,7 +107,7 @@ PlotStats <-
       )
 
     d <-
-      data.frame(date = my.dates[max.f], event = "index investment break")
+      data.frame(date = my.dates[max.f], event = "Detected break")
     print(d)
     #add the break line
     g1 <-
@@ -115,7 +115,7 @@ PlotStats <-
         data = d,
         mapping = aes(xintercept = date),
         color = "black",
-        size = 1
+        linewidth = 1
       )
     dev.new()
     return(g1)
