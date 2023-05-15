@@ -15,6 +15,8 @@ Lags <- function(mat.y = mat.y,
   #get the dimensions
   p <-
     dim(mat.y)[1]
+
+
   n <- dim(mat.y)[2]
 
   #optional: keep the rownames dates of the data frame with final matching
