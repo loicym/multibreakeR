@@ -167,7 +167,7 @@ Main <- function(mat.y,
   if (pos.break)
     f.stat[mean.shift < 0] <- 0
 
-  dev.new()
+  # dev.new()
   plot(f.stat)
 
   g1 <- PlotStats(

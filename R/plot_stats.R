@@ -117,6 +117,6 @@ PlotStats <-
         color = "black",
         linewidth = 1
       )
-    dev.new()
+    # dev.new()
     return(g1)
   }
