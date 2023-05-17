@@ -58,28 +58,28 @@ PlotStats <-
 
     g1 <-
       ggplot(mat.y,
-             aes(
+             ggplot2::aes(
                x = Date,
                y = value,
                group = Variables,
                colour = Variables
              ))
-    g1 <- g1  + geom_line()
+    g1 <- g1  + ggplot2::geom_line()
 
     g1 <-
-      g1 + ggtitle("") + xlab("Date") + ylab("Process")
+      g1 + ggplot2::ggtitle("") + ggplot2::xlab("Date") + ggplot2::ylab("Process")
 
     #force the y axis to start at zero
     g1 <-
-      g1 + scale_y_continuous(expand = c(0, 0))
+      g1 + ggplot2::scale_y_continuous(expand = c(0, 0))
 
-    g1 <- g1 + scale_x_date(breaks = scales::pretty_breaks(n = 10))
+    g1 <- g1 + ggplot2::scale_x_date(breaks = scales::pretty_breaks(n = 10))
 
-    g1 <- g1 + theme_bw()
+    g1 <- g1 + ggplot2::theme_bw()
 
     #add shaded area for various ci
     g1 <-
-      g1 + annotate(
+      g1 + ggplot2::annotate(
         "rect",
         xmin = start.date90,
         xmax = end.date90,
@@ -88,7 +88,7 @@ PlotStats <-
         alpha = .6
       )
     g1 <-
-      g1 + annotate(
+      g1 + ggplot2::annotate(
         "rect",
         xmin = start.date95,
         xmax = end.date95,
@@ -97,7 +97,7 @@ PlotStats <-
         alpha = .4
       )
     g1 <-
-      g1 + annotate(
+      g1 + ggplot2::annotate(
         "rect",
         xmin = start.date99,
         xmax = end.date99,
@@ -111,9 +111,9 @@ PlotStats <-
     print(d)
     #add the break line
     g1 <-
-      g1 + geom_vline(
+      g1 + ggplot2::geom_vline(
         data = d,
-        mapping = aes(xintercept = date),
+        mapping = ggplot2::aes(xintercept = date),
         color = "black",
         linewidth = 1
       )
