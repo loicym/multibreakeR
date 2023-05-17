@@ -8,7 +8,6 @@
 #' @param trend If a trend is considered (default to false)
 #' @param intercept If the test is on the intercept (default to true)
 #'
-
 #' @return A data frame object that contains all AIC (first row) and BIC (second row) for all the q.max lags tested.
 #' @export
 #' @importFrom dplyr "%>%"
