@@ -12,7 +12,6 @@
 #' @importFrom dplyr "%>%"
 
 
-
 ConformableMatrix <- function(mat.y, q, mat.x, trend = FALSE, intercept = TRUE) {
 
   #get the original number of observations

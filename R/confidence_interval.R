@@ -13,7 +13,6 @@
 #' @export
 #' @importFrom dplyr "%>%"
 
-
 ConfidenceInterval <-
   function(mat.g,
            mat.s,

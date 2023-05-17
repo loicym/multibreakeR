@@ -11,8 +11,8 @@
 #' @return A ggplot2 object
 #' @export
 #' @importFrom dplyr "%>%"
-
-
+#' @importFrom ggplot2 ggplot
+#' @importFrom reshape2 melt
 
 PlotStats <-
   function(my.dates, my.vars, f.stat, mat.ci = mat.ci, mat.y) {

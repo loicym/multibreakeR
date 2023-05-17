@@ -12,7 +12,6 @@
 #' @importFrom dplyr "%>%"
 
 
-
 Simul <- function(n = 100,
                   p = 5,
                   intensity = 1,

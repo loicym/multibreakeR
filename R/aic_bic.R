@@ -12,8 +12,6 @@
 #' @export
 #' @importFrom dplyr "%>%"
 
-
-
 AicBic <-
   function(mat.y,
            q.max,

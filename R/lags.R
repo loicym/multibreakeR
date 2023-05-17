@@ -9,7 +9,6 @@
 #' @export
 #' @importFrom dplyr "%>%"
 
-
 Lags <- function(mat.y = mat.y,
                  q = q) {
   #get the dimensions

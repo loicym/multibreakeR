@@ -1,21 +1,23 @@
-Package: multibreakeR
 Type: Package
-Title: This package test for a common break in multivariate time series, giving the most likely date and the confidence interval.
+Package: multibreakeR
+Authors@R: person("Loic", "Marechal", email = "loic.marechal@unil.ch", role = c("cre","aut"))
+Title: This package test for a common break in multivariate time series,
+    giving the most likely date and the confidence interval
 Version: 0.1.0
-Description: This implement, in a flexible way, the algorithm of Bai, Lumsdaine, and Stock (1998)
-    It authorizes inclusion of trends, exogeneous covariates and break test on the intercept.
-License: What license is it under?
+Description: This implement, in a flexible way, the algorithm of Bai, Lumsdaine, and Stock (1998). It authorizes inclusion of trends, exogeneous covariates and break test on the intercept or on the full VAR.
+License: GPL
+Imports:
+    ggplot2,
+    reshape2,
+    dplyr,
+    scales,
+    rlang (>= 0.4.11)
+Suggests: 
+    knitr,
+    rmarkdown,
+    roxygen2
+VignetteBuilder: 
+    knitr
 Encoding: UTF-8
 LazyData: true
 RoxygenNote: 7.2.3
-Imports:
-    stats
-    ggplot2
-    reshape2
-    ggpubr
-    stargazer
-    reshape
-Suggests: 
-    knitr,
-    rmarkdown
-VignetteBuilder: knitr

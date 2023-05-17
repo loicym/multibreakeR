@@ -16,6 +16,8 @@ Beta(mat.z, mat.y.ex, n.eq, p, est.mode, iter)
 \item{p}{number of observations}
 
 \item{est.mode}{estimation mode: "OLS", "FGLS", or "IGLS"}
+
+\item{iter}{If "IGLS" is used, how many iterations before stopping}
 }
 \value{
 A list with the matrix of beta parameters as first element and the covariance matrix of error as second element.

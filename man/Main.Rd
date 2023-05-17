@@ -37,14 +37,12 @@ Main(
 
 \item{q.max}{Maximum lag tested for the AIC or BIC criterion}
 
-\item{trim}{Percentage for the trim value for the starting and ending window over which the algorithm is not tested. Default to 15%}
+\item{trim}{Percentage for the trim value for the starting and ending window over which the algorithm is not tested. Default to 15\%}
 
 \item{pos.break}{Whether we want to select the maximum positive break only and discard the negative ones. Default to FALSE}
 }
 \value{
-A list of the vector of f-statistics, the maximum f-statistic retained, the confidence interval, the critical values,
-the break date, the original matrix of time series tested, the matrix with breaking and not breaking covariates, the index of the break in the time series,
-the size of the break (mean.shift), the optimal "AIC" or "BIC", a ggplot object (g1), and the trimmed dates.
+A list of the vector of f-statistics, the maximum f-statistic retained, the confidence interval, the critical values, the break date, the original matrix of time series tested, the matrix with breaking and not breaking covariates, the index of the break in the time series, the size of the break (mean.shift), the optimal "AIC" or "BIC", a ggplot object (g1), and the trimmed dates.
 }
 \description{
 Entry point for the whole computation of the algorithm of Bai, Lumsdaine, and Stock (1998)
