@@ -1,8 +1,7 @@
 Type: Package
 Package: multibreakeR
 Authors@R: person("Loic", "Marechal", email = "loic.marechal@unil.ch", role = c("cre","aut"))
-Title: This package test for a common break in multivariate time series,
-    giving the most likely date and the confidence interval
+Title: Tests for a Structural Change in Multivariate Time Series
 Version: 0.1.0
 Description: This package implements, in a flexible way, the algorithm of Bai, Lumsdaine, and Stock (1998). It authorizes inclusion of trends, exogeneous covariates and break test on the intercept or on the full VAR.
 License: GPL
