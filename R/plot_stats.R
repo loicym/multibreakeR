@@ -13,10 +13,13 @@
 #' @importFrom dplyr "%>%"
 #' @importFrom ggplot2 ggplot
 #' @importFrom reshape2 melt
+#' @importFrom reshape2 melt
 
 PlotStats <-
   function(my.dates, my.vars, f.stat, mat.ci = mat.ci, mat.y) {
     my.dates <- as.Date(my.dates, format = "%d.%m.%Y")
+
+    Date <- value <- Variables <- NULL
 
     #get the index when the break occurs
     max.f <- which.max(f.stat)

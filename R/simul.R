@@ -10,7 +10,8 @@
 #' @return A matrix of time series with a common break
 #' @export
 #' @importFrom dplyr "%>%"
-
+#' @importFrom stats rnorm
+#' @importFrom utils head
 
 Simul <- function(n = 100,
                   p = 5,

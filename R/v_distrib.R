@@ -7,7 +7,7 @@
 #' @return A vector of critical values
 #' @export
 #' @importFrom dplyr "%>%"
-
+#' @importFrom stats pnorm
 
 
 Vdistr <- function(ci) {

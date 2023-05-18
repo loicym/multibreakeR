@@ -11,6 +11,10 @@
 #' @return A data frame object that contains all AIC (first row) and BIC (second row) for all the q.max lags tested.
 #' @export
 #' @importFrom dplyr "%>%"
+#' @importFrom stats lm
+#' @importFrom stats AIC
+#' @importFrom stats BIC
+
 
 AicBic <-
   function(mat.y,

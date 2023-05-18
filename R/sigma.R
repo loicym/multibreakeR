@@ -10,7 +10,7 @@
 #' @return The covariance matrix of errors
 #' @export
 #' @importFrom dplyr "%>%"
-
+#' @importFrom stats cov
 
 Sigma <- function(mat.z, mat.y.ex, mat.beta, n.eq) {
   #get the n*p vector of residuals

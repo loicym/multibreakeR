@@ -4,9 +4,9 @@ Title: Tests for a Structural Change in Multivariate Time Series
 Version: 0.1.0
 Authors@R: 
     person("Loic", "Marechal", , "loic.marechal@unil.ch", role = c("cre", "aut"))
-Description: This package implements, in a flexible way, the algorithm of
+Description: Flexible implementation of the algorithm of
     Bai, Lumsdaine, and Stock (1998). It authorizes inclusion of trends,
-    exogeneous covariates and break test on the intercept or on the full
+    exogenous covariates and break test on the intercept or on the full
     VAR.
 License: GPL
 Imports:
@@ -14,7 +14,8 @@ Imports:
     ggplot2,
     reshape2,
     rlang (>= 0.4.11),
-    scales
+    scales,
+    stats
 Suggests: 
     knitr,
     rmarkdown,
