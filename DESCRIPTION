@@ -8,6 +8,7 @@ Description: Flexible implementation of a multivariate structural change
     point algorithm of. It authorizes inclusion of trends, exogenous
     variables and break test on the intercept or on the full VAR.
 License: GPL
+Language: en-US
 Imports:
     dplyr,
     ggplot2,

@@ -18,7 +18,7 @@
 #' @source \href{https://github.com/loicym/multibreakeR}{https://github.com/loicym/multibreakeR}
 #'
 #' @examples
-#'
+#'\dontrun{
 #' data(example_data)
-#' list.breaks <- Main(mat.y = example_data)
+#' list.breaks <- Main(mat.y = example_data)}
 "example_data"
