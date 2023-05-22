@@ -4,10 +4,8 @@ Title: Tests for a Structural Change in Multivariate Time Series
 Version: 0.1.0
 Authors@R: 
     person("Loic", "Marechal", , "loic.marechal@unil.ch", role = c("cre", "aut"))
-Description: Flexible implementation of the algorithm of
-    Bai, Lumsdaine, and Stock (1998). It authorizes inclusion of trends,
-    exogenous covariates and break test on the intercept or on the full
-    VAR.
+Description: Flexible implementation of a multivariate structural change point algorithm of. It authorizes inclusion of trends,
+    exogenous variables and break test on the intercept or on the full VAR.
 License: GPL
 Imports:
     dplyr,
