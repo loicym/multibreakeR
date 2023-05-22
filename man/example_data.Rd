@@ -20,6 +20,7 @@ Data generated with the function Simul() of the multibreakeR package with
 These are also the default arguments of the Simul() function.
 }
 \examples{
+
 data(example_data)
 list.breaks <- Main(mat.y = example_data)
 }
