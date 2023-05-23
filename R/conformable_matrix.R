@@ -10,9 +10,15 @@
 #' @return A list of conformed matrices
 #' @export
 #' @importFrom dplyr "%>%"
+#' @examples
+#' data(example_data)
+#' conf.matrix <- ConformableMatrix(mat.y = example_data, q = 2)
 
-
-ConformableMatrix <- function(mat.y, q, mat.x, trend = FALSE, intercept = TRUE) {
+ConformableMatrix <- function(mat.y,
+                              q,
+                              mat.x = NULL,
+                              trend = FALSE,
+                              intercept = TRUE) {
 
   #get the original number of observations
   p.init <-
@@ -35,8 +41,6 @@ ConformableMatrix <- function(mat.y, q, mat.x, trend = FALSE, intercept = TRUE) 
   #number of equations of the VAR
   n.eq <-
     dim(mat.y)[2]
-
-  print(p)
 
   #identity matrix of the number of equations of the VAR
   id.n <-
@@ -63,7 +67,7 @@ ConformableMatrix <- function(mat.y, q, mat.x, trend = FALSE, intercept = TRUE) 
     }
 
     else
-      print("The number of observations of X does not match the one of Y")
+    warning("The number of observations of X does not match the one of Y")
   }
 
   #check if we add a trend

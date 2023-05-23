@@ -12,13 +12,16 @@
 #' @importFrom dplyr "%>%"
 #' @importFrom stats rnorm
 #' @importFrom utils head
+#' @examples
+#' data(example_data)
+#' simul.data <- Simul(n = 100, p = 5, intensity = 1, when.break = 0.5)
+
+
 
 Simul <- function(n = 100,
                   p = 5,
                   intensity = 1,
-                  when.break = 0.35) {
-  #optional
-  set.seed(123)
+                  when.break = 0.5){
 
   pre.break.n <- round(n * when.break)
   post.break.n <- round(n * (1 - when.break))
@@ -35,7 +38,7 @@ Simul <- function(n = 100,
     )
   )
 
-  #date when I wrote this code
+  #date when this code was written
   start.date <-
     as.Date("10.05.2023", format = "%d.%m.%Y")
 
@@ -45,6 +48,5 @@ Simul <- function(n = 100,
   rownames(mat.y) <- simul.dates
   colnames(mat.y) <- LETTERS[1:p]
 
-  print(head(mat.y))
   return(mat.y)
 }

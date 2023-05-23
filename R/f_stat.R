@@ -11,7 +11,10 @@
 #' @export
 #' @importFrom dplyr "%>%"
 
-Fstat <- function(mat.r, mat.beta, mat.z, p, mat.sigma) {
+Fstat <- function(mat.r,
+                  mat.beta,
+                  mat.z, p,
+                  mat.sigma) {
   #pre compute the mat.r.beta matrix with the selected coefficients allowed to break
   mat.r.beta <- mat.r %*% mat.beta
 

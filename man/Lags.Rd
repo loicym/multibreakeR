@@ -4,7 +4,7 @@
 \alias{Lags}
 \title{Lags}
 \usage{
-Lags(mat.y = mat.y, q = q)
+Lags(mat.y, q)
 }
 \arguments{
 \item{mat.y}{The matrix of time series}
@@ -16,4 +16,8 @@ A list of original (dependent) and lagged (independent) time series matrix
 }
 \description{
 Compute the lags for the mat.y time series matrix
+}
+\examples{
+data(example_data)
+list.lags <- Lags(mat.y = example_data, q = 2)
 }

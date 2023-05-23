@@ -12,7 +12,10 @@
 #' @importFrom dplyr "%>%"
 #' @importFrom stats cov
 
-Sigma <- function(mat.z, mat.y.ex, mat.beta, n.eq) {
+Sigma <- function(mat.z,
+                  mat.y.ex,
+                  mat.beta,
+                  n.eq) {
   #get the n*p vector of residuals
   errors <- (mat.y.ex - t(mat.z) %*% mat.beta)
 

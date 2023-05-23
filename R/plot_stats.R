@@ -16,7 +16,12 @@
 #' @importFrom reshape2 melt
 
 PlotStats <-
-  function(my.dates, my.vars, f.stat, mat.ci = mat.ci, mat.y) {
+  function(my.dates,
+           my.vars,
+           f.stat,
+           mat.ci = mat.ci,
+           mat.y) {
+
     my.dates <- as.Date(my.dates, format = "%d.%m.%Y")
 
     Date <- value <- Variables <- NULL
@@ -39,8 +44,7 @@ PlotStats <-
     start.date99 <- my.dates[max.f - cis[3]]
     end.date99 <- my.dates[max.f + cis[3]]
 
-    p <- dim(mat.y)[1]
-    n <- dim(mat.y)[2]
+    p <- dim(mat.y)[2]
 
     #get values in percentage
     mat.y <-
@@ -50,14 +54,14 @@ PlotStats <-
     mat.y <- data.frame(cbind(my.dates, mat.y))
 
     colnames(mat.y)[1] <- "Date"
-    colnames(mat.y)[2:(n + 1)] <- my.vars
+    colnames(mat.y)[2:(p + 1)] <- my.vars
 
     mat.y[, 1] <- my.dates
 
     #reshape to long format
     mat.y <-
       melt(mat.y, id.var = "Date")
-    names(mat.y)[2] = "Variables"
+    names(mat.y)[2] <- "Variables"
 
     g1 <-
       ggplot(mat.y,
@@ -111,7 +115,8 @@ PlotStats <-
 
     d <-
       data.frame(date = my.dates[max.f], event = "Detected break")
-    print(d)
+
+    message(paste0("Break detected at date: ", my.dates[max.f]))
     #add the break line
     g1 <-
       g1 + ggplot2::geom_vline(
@@ -120,6 +125,6 @@ PlotStats <-
         color = "black",
         linewidth = 1
       )
-    # dev.new()
+
     return(g1)
   }

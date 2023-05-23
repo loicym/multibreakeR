@@ -47,3 +47,8 @@ A list of the vector of f-statistics, the maximum f-statistic retained, the conf
 \description{
 Entry point for the whole computation of the algorithm of Bai, Lumsdaine, and Stock (1998)
 }
+\examples{
+\donttest{
+data(example_data)
+list.results <- Main(mat.y = example_data, q = 2)}
+}

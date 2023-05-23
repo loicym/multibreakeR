@@ -8,16 +8,17 @@
 #' @export
 #' @importFrom dplyr "%>%"
 #' @importFrom stats pnorm
-
+#' @examples
+#' vect.cv <- Vdistr(ci = c(0.9, 0.95, 0.99))
 
 Vdistr <- function(ci) {
+
   #get the number of confidence interval elements
   n <- length(ci)
   #redefine target for a two tail confidence interval
   target <-
     1 - (1 - ci) / 2
 
-  print(paste0("The vdistr targets are: ", target))
   #define the support sequence "x" for the CDF of V
   x <-
     seq(-200, 200, 0.01)
@@ -38,7 +39,6 @@ Vdistr <- function(ci) {
   cv <- rep(NA, n)
   k <- 1
 
-  print(target)
   for (i in 2:length(x)) {
     if (cum.v[i - 1] < target[k] && cum.v[i] >= target[k]) {
       cv[k] <- x[i]

@@ -8,9 +8,13 @@
 #' @return A list of original (dependent) and lagged (independent) time series matrix
 #' @export
 #' @importFrom dplyr "%>%"
+#' @examples
+#' data(example_data)
+#' list.lags <- Lags(mat.y = example_data, q = 2)
 
-Lags <- function(mat.y = mat.y,
-                 q = q) {
+
+Lags <- function(mat.y,
+                 q) {
   #get the dimensions
   p <-
     dim(mat.y)[1]
@@ -28,8 +32,8 @@ Lags <- function(mat.y = mat.y,
 
   #create an empty matrix
   mat.y.lag <-
-    matrix(data = NA, nrow <-
-             (p - q), ncol <-
+    matrix(data = NA, nrow =
+             (p - q), ncol =
              (n * (q + 1)))
 
   for (i in 0:q) {

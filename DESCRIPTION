@@ -4,9 +4,9 @@ Title: Tests for a Structural Change in Multivariate Time Series
 Version: 0.1.0
 Authors@R: 
     person("Loic", "Marechal", , "loic.marechal@unil.ch", role = c("cre", "aut"))
-Description: Flexible implementation of a multivariate structural change
-    point algorithm of. It authorizes inclusion of trends, exogenous
-    variables and break test on the intercept or on the full VAR.
+Description: Flexible implementation of a structural change point detection algorithm for multivariate time series.
+    It authorizes inclusion of trends, exogenous variables, and break test on the intercept or on the full vector autoregression system.
+    Bai, Lumsdaine, and Stock (1998) <doi:10.1111/1467-937X.00051>.
 License: GPL
 Language: en-US
 Imports:
@@ -27,3 +27,4 @@ Config/testthat/edition: 3
 Encoding: UTF-8
 LazyData: true
 RoxygenNote: 7.2.3
+URL: https://github.com/loicym/multibreakeR

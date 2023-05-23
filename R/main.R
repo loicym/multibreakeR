@@ -14,6 +14,10 @@
 #' @return A list of the vector of f-statistics, the maximum f-statistic retained, the confidence interval, the critical values, the break date, the original matrix of time series tested, the matrix with breaking and not breaking covariates, the index of the break in the time series, the size of the break (mean.shift), the optimal "AIC" or "BIC", a ggplot object (g1), and the trimmed dates.
 #' @export
 #' @importFrom dplyr "%>%"
+#' @examples
+#' \donttest{
+#' data(example_data)
+#' list.results <- Main(mat.y = example_data, q = 2)}
 
 Main <- function(mat.y,
                  mat.x = NULL,
@@ -32,12 +36,9 @@ Main <- function(mat.y,
   #return the AIC and BIC criteria for lags from 1 to q.max
   q.opt <- AicBic(mat.y, q.max, mat.x, trend, intercept)
 
-  #print the matrix of AIC and BIC for each lags
-  print(q.opt)
-
   #choose the lag q according to the min AIC
   q <- as.numeric(which.min(q.opt[aic.bic.mode, ]))
-  print(paste0("lag with the minimum ", aic.bic.mode, " is: ", q))
+  message(paste0("Lag with the minimum ", aic.bic.mode, ": ", q))
 
   l.conf <-
     ConformableMatrix(
@@ -69,7 +70,7 @@ Main <- function(mat.y,
   #matching dates
   my.dates <- l.conf$my.dates
 
-  print(paste0("The number of equations in the system is: ", n.eq))
+  message(paste0("Number of equations in the system: ", n.eq))
   #create a vector of f_statistics for each k tested
   f.stat <- rep(NA, p)
   #create a vector with the evaluated size of the intercept difference
@@ -91,9 +92,6 @@ Main <- function(mat.y,
 
   #loop over the k with a trimming date/burn period
   for (k in start.ind:end.ind) {
-    #where we are in the loop every 10 iterations
-    if (k %% 10 == 0)
-      print(paste0("The iteration is at the level k = ", k))
 
     #force filling the mat.g.ex matrix with 0 before and original values after k
     mat.g.ex.b <- mat.g.ex %*% t(mat.s)

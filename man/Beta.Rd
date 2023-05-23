@@ -20,8 +20,10 @@ Beta(mat.z, mat.y.ex, n.eq, p, est.mode, iter)
 \item{iter}{If "IGLS" is used, how many iterations before stopping}
 }
 \value{
-A list with the matrix of beta parameters as first element and the covariance matrix of error as second element.
+A list with the matrix of beta parameters as first element
+and the covariance matrix of error as second element.
 }
 \description{
-#Compute the matrix of parameters and the covariance matrix of errors in OLS, FGLS, or IGLS mode.
+#Compute the matrix of parameters and the covariance
+matrix of errors in OLS, FGLS, or IGLS mode.
 }

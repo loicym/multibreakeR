@@ -4,7 +4,7 @@
 \alias{ConformableMatrix}
 \title{ConformableMatrix}
 \usage{
-ConformableMatrix(mat.y, q, mat.x, trend = FALSE, intercept = TRUE)
+ConformableMatrix(mat.y, q, mat.x = NULL, trend = FALSE, intercept = TRUE)
 }
 \arguments{
 \item{mat.y}{The matrix object of time series}
@@ -22,4 +22,8 @@ A list of conformed matrices
 }
 \description{
 Compute the list of matrices with correct dimensions to pass later in the computation
+}
+\examples{
+data(example_data)
+conf.matrix <- ConformableMatrix(mat.y = example_data, q = 2)
 }

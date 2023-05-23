@@ -20,9 +20,17 @@ Data generated with the function Simul() of the multibreakeR package with
 These are also the default arguments of the Simul() function.
 }
 \examples{
-\dontrun{
-data(example_data)
-list.breaks <- Main(mat.y = example_data)}
+list.breaks <- Main(mat.y = Simul(p = 2, when.break = 0.5),
+ mat.x = NULL,
+  trend = FALSE,
+   intercept = TRUE,
+    ci = c(0.9, 0.95, 0.99),
+     est.mode = "OLS",
+      iter = 3,
+       aic.bic.mode = "AIC",
+        q.max = 2,
+         trim = 0.4,
+          pos.break = FALSE)
 }
 \references{
 MultibreakeR generated data

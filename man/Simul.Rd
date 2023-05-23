@@ -4,7 +4,7 @@
 \alias{Simul}
 \title{Simul}
 \usage{
-Simul(n = 100, p = 5, intensity = 1, when.break = 0.35)
+Simul(n = 100, p = 5, intensity = 1, when.break = 0.5)
 }
 \arguments{
 \item{n}{The number of time series observations}
@@ -20,4 +20,8 @@ A matrix of time series with a common break
 }
 \description{
 #Simulate data to test the functions
+}
+\examples{
+data(example_data)
+simul.data <- Simul(n = 100, p = 5, intensity = 1, when.break = 0.5)
 }

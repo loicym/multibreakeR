@@ -8,29 +8,34 @@
 #' @param trend If a trend is considered (default to false)
 #' @param intercept If the test is on the intercept (default to true)
 #'
-#' @return A data frame object that contains all AIC (first row) and BIC (second row) for all the q.max lags tested.
+#' @return A data frame object that contains all AIC (first row) and BIC (second row)
+#'  for all the q.max lags tested.
 #' @export
 #' @importFrom dplyr "%>%"
 #' @importFrom stats lm
 #' @importFrom stats AIC
 #' @importFrom stats BIC
+#' @examples
+#' data(example_data)
+#' aic.bic <- AicBic(mat.y = example_data,
+#'  q.max = 2,
+#'   trend = FALSE,
+#'    intercept = TRUE)
 
 
 AicBic <-
   function(mat.y,
            q.max,
-           mat.x,
-
+           mat.x = NULL,
            trend = FALSE,
            intercept = TRUE) {
     #create empty matrix for the AIC/BIC criteria
 
     aic.bic <-
-      matrix(data <-
+      matrix(data =
                NA, nrow = 2, ncol = q.max)
 
     for (q in 1:q.max) {
-      print(paste0("Testing lags number : ", q))
 
       #create a list of conformed objects for the estimation
       l.conf.matrix <-

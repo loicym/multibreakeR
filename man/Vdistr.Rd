@@ -15,3 +15,6 @@ A vector of critical values
 \description{
 Computes the critical values for a vector of confidence intervals proposed (ci)
 }
+\examples{
+vect.cv <- Vdistr(ci = c(0.9, 0.95, 0.99))
+}
