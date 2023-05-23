@@ -13,7 +13,6 @@
 #' @importFrom dplyr "%>%"
 #' @importFrom ggplot2 ggplot
 #' @importFrom reshape2 melt
-#' @importFrom reshape2 melt
 
 PlotStats <-
   function(my.dates,
@@ -116,7 +115,7 @@ PlotStats <-
     d <-
       data.frame(date = my.dates[max.f], event = "Detected break")
 
-    message(paste0("Break detected at date: ", my.dates[max.f]))
+    message(paste0("Break detected on date: ", my.dates[max.f]))
     #add the break line
     g1 <-
       g1 + ggplot2::geom_vline(
